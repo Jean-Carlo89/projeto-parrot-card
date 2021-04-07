@@ -1,0 +1,68 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body{
+    font-family: Roboto;
+    font-size: 56px;
+    color: #75B79E;
+    background-color: #EEF9BF;
+    min-width: 335px;
+}
+
+.top{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 872px;
+    margin: 0 auto;
+}
+
+.card-list{
+    width: 872px;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 117px;
+    height: 146px;
+    border-radius: 5px;
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 34px;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+}
+
+
+
+@media(max-width:670px){
+
+    .top{
+        margin: 0 auto;
+        width: 80%;
+        min-width:332px
+    }
+    .card-list{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        min-width:332px
+    }
+
+   
+
+}
