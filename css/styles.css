@@ -11,6 +11,10 @@ body{
     min-width: 335px;
 }
 
+
+
+
+
 .top{
     height: 150px;
     display: flex;
@@ -21,30 +25,77 @@ body{
 }
 
 .card-list{
-    width: 872px;
+    width: 815px;
     background-color: white;
+    
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+
+
+    position: relative;
 }
 
-.card{
+.turn-anchor{
+    border:1px solid red;
     width: 117px;
     height: 146px;
+    position: relative;
+    top:0;
+    left: 0;
+    margin-bottom: 34px;
+    
+}
+
+
+
+.card{
+    width: 100%;
+    height: 100%;
     border-radius: 5px;
     background: #A7E9AF;
     border: 1px solid #99CEA8;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 34px;
+    
+    
+    
+    position: absolute;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .card img{
     width: 100px;
     height: 100px;
 }
+
+
+/*-----------Comandos de virar----*/
+.back-face{
+    transform: rotateY(180deg);
+    transition: all none;
+    
+}
+
+.turn-back-face{
+    transform: rotateY(180deg);
+}
+
+.back-face.turn-back-face {
+    
+    transform: rotateY(0deg);
+    
+  }
+
+.turn{
+    transform: rotateY(-180deg);
+}
+
+
 
 
 
