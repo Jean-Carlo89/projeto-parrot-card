@@ -74,23 +74,63 @@ for(let i=0; i<x;i++){
 
 
 /*--------------------------------------Funcao que vira a carta------------------*/
-let turnedCards = 0;
+let flipped =false;
+let firstCard,firstCardBack,secondCard,secondCardBack;
+let src1,src2;
+let attempts=0;
+let pair=0;
+
 function turnCard(cardIndex){
-    turnedCards++
-    console.log(`turned cards: ${turnedCards}`)
-    console.log(cardIndex)
+    attempts++
+    /*console.log(attempts)*/
+    /*console.log(cardIndex)*/
     const frontFace = document.querySelector('.card-list ' +cardIndex + ' .card')
     frontFace.classList.add('turn')
-    
+
     const backFace = document.querySelector('.card-list ' +cardIndex +' .back-face')
     backFace.classList.add('turn-back-face')
 
-    const backFaceImg = backFace.querySelector('img')
+    if(!flipped){
+        flipped=true;
+        firstCard=frontFace
+        firstCardBack=backFace
+        src1=firstCardBack.querySelector('img').src;
+        /*console.log(src1)*/
+       /*let remove =  document.querySelector('.card-list ' +cardIndex).removeAttribute("onclick");
+       console.log(firstCard)
+       console.log(firstCard.parentNode)*/
+    }else{
+        flipped = false;
+        secondCard=frontFace
+        secondCardBack=backFace
+        src2=secondCardBack.querySelector('img').src
+    
+        
+
+        if(src1===src2){
+            firstCard.parentNode.removeAttribute("onclick");
+            secondCard.parentNode.removeAttribute("onclick");
+            pair++
+            console.log(pair)
+        }else{
+            setTimeout( () =>{
+            
+            firstCard.classList.remove('turn');
+            firstCardBack.classList.remove('turn-back-face');
+            secondCard.classList.remove('turn');
+            secondCardBack.classList.remove('turn-back-face');
+            },1000);
+        }
+    
+    }
 }
 
 
+console.log(x)
 
-
+if(pair==x){
+    console.log((`Parabéns: você ganhou em ${attempts} jogadas`));
+}
 
 
 /*-----------------------------------------teste da array de imagens----------
@@ -104,9 +144,3 @@ function changeImage(){
         imageCounter=0;
     }
 }*/
-
-
-
-
-
-/*-------------------------------------------------Pares de carta por numero digitad0----*/

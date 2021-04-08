@@ -25,17 +25,17 @@ body{
     width: 815px;
     margin-left: auto;
     margin-right: auto;
-    background-color: orange;
+    
 }
 
 h1{
-    border: 1px solid red;
+    
     margin: 0 auto;
 }
 
 .card-list{
     width: 815px;
-    background-color: white;
+    
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -46,7 +46,7 @@ h1{
 }
 
 .turn-anchor{
-    border:1px solid red;
+    
     width: 117px;
     height: 146px;
     position: relative;
