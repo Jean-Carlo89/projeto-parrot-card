@@ -8,26 +8,34 @@ body{
     font-size: 56px;
     color: #75B79E;
     background-color: #EEF9BF;
-    min-width: 335px;
+    /*min-width: 335px;*/
+    
+    
 }
 
 
 
 
 
-.top{
+.topo{
     height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 872px;
+    width: 815px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange;
+}
+
+h1{
+    border: 1px solid red;
     margin: 0 auto;
 }
 
 .card-list{
     width: 815px;
     background-color: white;
-    
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -73,6 +81,10 @@ body{
     height: 100px;
 }
 
+img{
+    width: 100px;
+    height: 100px;
+}
 
 /*-----------Comandos de virar----*/
 .back-face{
@@ -96,24 +108,30 @@ body{
 }
 
 
+@media(max-width:870px){
 
+    .topo{
+        width:70%;
+    }
+    .card-list{
+        width: 70%;
+    }
+}
 
 
 @media(max-width:670px){
 
-    .top{
-        margin: 0 auto;
-        width: 80%;
+    .topo{
+        
+        width: 90%;
         min-width:332px
     }
     .card-list{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 80%;
-        min-width:332px
+        width: 90%;
+        min-width:332px;
+        margin: 0 auto;
     }
-
-   
-
 }
