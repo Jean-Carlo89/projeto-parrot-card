@@ -30,7 +30,7 @@ function comparador(){
     return Math.random() - 0.5;
 }
 
-const x = (numberOfCards/2)
+let x = (numberOfCards/2)
 for(let i = 0;i<x;i++){
     chosenCards.push([images[i]])
 }
@@ -111,7 +111,7 @@ function turnCard(cardIndex){
             firstCard.parentNode.removeAttribute("onclick");
             secondCard.parentNode.removeAttribute("onclick");
             pair++
-            console.log(pair)
+            /*console.log(pair)*/
         }else{
             setTimeout( () =>{
             
@@ -123,14 +123,15 @@ function turnCard(cardIndex){
         }
     
     }
+
+    if(pair===x){
+        setTimeout(() => {
+            alert(`Você ganhou em ${attempts} rodadas`);
+        }, 500);
+        
+    }
 }
 
-
-console.log(x)
-
-if(pair==x){
-    console.log((`Parabéns: você ganhou em ${attempts} jogadas`));
-}
 
 
 /*-----------------------------------------teste da array de imagens----------
