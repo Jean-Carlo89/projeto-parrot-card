@@ -9,6 +9,7 @@ do{
     if(numberOfCards%2!==0 || numberOfCards<4 || numberOfCards>14){
         alert(`Número de cartas inválido. Por favor selecione um número par entre 4 e 14`)
     }else{
+        contador = 0;
         break;
     }
     /*contador++
@@ -78,7 +79,7 @@ let flipped =false;
 let firstCard,firstCardBack,secondCard,secondCardBack;
 let src1,src2;
 let attempts=0;
-let pair=0;
+/*let pair=0;*/
 
 function turnCard(cardIndex){
     attempts++
@@ -110,7 +111,7 @@ function turnCard(cardIndex){
         if(src1===src2){
             firstCard.parentNode.removeAttribute("onclick");
             secondCard.parentNode.removeAttribute("onclick");
-            pair++
+            contador++
             /*console.log(pair)*/
         }else{
             setTimeout( () =>{
@@ -124,7 +125,7 @@ function turnCard(cardIndex){
     
     }
 
-    if(pair===x){
+    if(contador===x){
         setTimeout(() => {
             alert(`Você ganhou em ${attempts} rodadas`);
         }, 500);
