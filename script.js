@@ -100,7 +100,7 @@ function checkMatch(){
         
         removeOnclick()
     }else{
-
+ 
         turnBack(firstParent,secondParent)
     }
 }
