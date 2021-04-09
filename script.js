@@ -90,8 +90,17 @@ function turnCard(cardIndex){
 
     const backFace = document.querySelector('.card-list ' +cardIndex +' .back-face')
     backFace.classList.add('turn-back-face')
+    console.log(flipped)
+    compare(frontFace,backFace)
+    
+   
+}
+
+
+function compare(frontFace,backFace){
 
     if(!flipped){
+        console.log(!flipped)
         flipped=true;
         firstCard=frontFace
         firstCardBack=backFace
@@ -132,7 +141,6 @@ function turnCard(cardIndex){
         
     }
 }
-
 
 
 /*-----------------------------------------teste da array de imagens----------
