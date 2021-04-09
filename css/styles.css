@@ -18,7 +18,6 @@ body{
     width: 815px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
 h1{
@@ -28,13 +27,10 @@ h1{
 
 .card-list{
     width: 815px;
-    
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
-
     position: relative;
 }
 
@@ -47,8 +43,6 @@ h1{
     left: 0;
     margin-bottom: 34px;
 }
-
-
 
 .card{
     width: 100%;
@@ -86,13 +80,13 @@ img{
     transform: rotateY(180deg);
 }
 
-.back-face.turn-back-face {
+.turn .back-face {
     
     transform: rotateY(0deg);
     
   }
 
-.turn{
+.turn .front-face{
     transform: rotateY(-180deg);
 }
 
